@@ -7,7 +7,7 @@ using System.IO;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace DotNet.Kit.JsonHelper
+namespace DotNet.Kit
 {
     public class JsonHelper
     {

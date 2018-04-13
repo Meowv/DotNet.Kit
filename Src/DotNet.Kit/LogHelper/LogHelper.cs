@@ -2,7 +2,7 @@
 using System.IO;
 using System.Web;
 
-namespace DotNet.Kit.LogHelper
+namespace DotNet.Kit
 {
     public class LogHelper
     {

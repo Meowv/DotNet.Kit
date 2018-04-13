@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace DotNet.Kit.ConfigHelper
+namespace DotNet.Kit
 {
     public class ConfigHelper
     {

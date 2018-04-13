@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 
-namespace DotNet.Kit.HttpHelper
+namespace DotNet.Kit
 {
     public class HttpHelper
     {
