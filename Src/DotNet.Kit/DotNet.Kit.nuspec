@@ -11,7 +11,7 @@
     <iconUrl>https://avatars0.githubusercontent.com/u/13010050</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>DotNet.Kit DotNet开发工具包第一个版本</releaseNotes>
+    <releaseNotes>DotNet.Kit-加入FileHelper，HtmlHelper，ImageHelper</releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>DotNet Kit qix</tags>
   </metadata>

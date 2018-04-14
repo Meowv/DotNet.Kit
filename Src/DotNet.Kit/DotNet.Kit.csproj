@@ -36,6 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,7 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfigHelper\ConfigHelper.cs" />
+    <Compile Include="FileHelper\FileHelper.cs" />
+    <Compile Include="HtmlHelper\HtmlHelper.cs" />
     <Compile Include="HttpHelper\HttpHelper.cs" />
+    <Compile Include="ImageHelper\ImageHelper.cs" />
     <Compile Include="JsonHelper\JsonHelper.cs" />
     <Compile Include="LogHelper\LogHelper.cs" />
     <Compile Include="MailHelper\MailHelper.cs" />
