@@ -6,12 +6,12 @@
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
-    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseUrl>
+    <licenseUrl>https://github.com/Meowv/DotNet.Kit/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://api.meowv.com</projectUrl>
     <iconUrl>https://avatars0.githubusercontent.com/u/13010050</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>DotNet.Kit-加入FileHelper，HtmlHelper，ImageHelper</releaseNotes>
+    <releaseNotes>DotNet.Kit-Add JavaScriptHelper</releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>DotNet Kit qix</tags>
   </metadata>
