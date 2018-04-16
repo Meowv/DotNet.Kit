@@ -1,0 +1,1 @@
+nuget pack DotNet.Kit.csproj -Prop Configuration=Release
