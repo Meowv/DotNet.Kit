@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfigHelper\ConfigHelper.cs" />
+    <Compile Include="CookieHelper\CookieHelper.cs" />
+    <Compile Include="CsvHelper\CsvHelper.cs" />
     <Compile Include="FileHelper\FileHelper.cs" />
     <Compile Include="HtmlHelper\HtmlHelper.cs" />
     <Compile Include="HttpHelper\HttpHelper.cs" />
@@ -56,7 +58,9 @@
     <Compile Include="LogHelper\LogHelper.cs" />
     <Compile Include="MailHelper\MailHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionHelper\SessionHelper.cs" />
     <Compile Include="StringHelper\StringHelper.cs" />
+    <Compile Include="TimeHelper\TimeHelper.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
