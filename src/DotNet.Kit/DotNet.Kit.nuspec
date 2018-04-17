@@ -11,7 +11,7 @@
     <iconUrl>https://avatars0.githubusercontent.com/u/13010050</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>DotNet.Kit-Add CookieHelper、SessionHelper、CsvHelper、TimeHelper</releaseNotes>
+    <releaseNotes>DotNet.Kit-Add SqlHelper,Usage is the same as dapper.</releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>DotNet Kit qix</tags>
   </metadata>
