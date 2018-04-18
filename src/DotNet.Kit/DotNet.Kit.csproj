@@ -106,6 +106,7 @@
     <Compile Include="SqlHelper\XmlHandlers.cs" />
     <Compile Include="StringHelper\StringHelper.cs" />
     <Compile Include="TimeHelper\TimeHelper.cs" />
+    <Compile Include="XmlHelper\XmlHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DotNet.Kit.nuspec" />
