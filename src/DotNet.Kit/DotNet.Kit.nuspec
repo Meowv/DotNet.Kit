@@ -11,7 +11,7 @@
     <iconUrl>https://avatars0.githubusercontent.com/u/13010050</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>DotNet.Kit-Add CacheHelper、RandomHelper</releaseNotes>
+    <releaseNotes>DotNet.Kit-Add RegexHelper</releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>DotNet Kit qix</tags>
   </metadata>
