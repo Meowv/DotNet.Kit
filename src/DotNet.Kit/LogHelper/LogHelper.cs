@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Web;
 
 namespace DotNet.Kit
 {
@@ -11,9 +10,9 @@ namespace DotNet.Kit
         /// </summary>
         /// <param name="className">类名</param>
         /// <param name="content">写入内容</param>
-        public static void Debug(string className, string content)
+        public static void Debug(string path, string className, string content)
         {
-            WriteLog("DEBUG", className, content);
+            WriteLog(path, "DEBUG", className, content);
         }
 
         /// <summary>
@@ -21,9 +20,9 @@ namespace DotNet.Kit
         /// </summary>
         /// <param name="className">类名</param>
         /// <param name="content">写入内容</param>
-        public static void Info(string className, string content)
+        public static void Info(string path, string className, string content)
         {
-            WriteLog("INFO", className, content);
+            WriteLog(path, "INFO", className, content);
         }
 
         /// <summary>
@@ -31,9 +30,9 @@ namespace DotNet.Kit
         /// </summary>
         /// <param name="className">类名</param>
         /// <param name="content">写入内容</param>
-        public static void Error(string className, string content)
+        public static void Error(string path, string className, string content)
         {
-            WriteLog("ERROR", className, content);
+            WriteLog(path, "ERROR", className, content);
         }
 
         /// <summary>
@@ -42,11 +41,8 @@ namespace DotNet.Kit
         /// <param name="type">日志记录类型</param>
         /// <param name="className">类名</param>
         /// <param name="content">写入内容</param>
-        protected static void WriteLog(string type,string className,string content)
+        protected static void WriteLog(string path, string type, string className, string content)
         {
-            //在网站根目录下创建logs目录
-            var path = HttpContext.Current.Request.PhysicalApplicationPath + "logs";
-
             //如果logs目录不存在就创建
             if (!Directory.Exists(path))
             {
