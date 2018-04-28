@@ -7,7 +7,7 @@ using System.Threading;
 namespace DotNet.Kit.Dapper
 {
     /// <summary>
-    /// Represents the key aspects of a sql operation
+    /// 表示sql操作的关键方面
     /// </summary>
     public struct CommandDefinition
     {
@@ -29,52 +29,52 @@ namespace DotNet.Kit.Dapper
         }
 
         /// <summary>
-        /// The command (sql or a stored-procedure name) to execute
+        /// 要执行的命令(sql或存储过程名称)
         /// </summary>
         public string CommandText { get; }
 
         /// <summary>
-        /// The parameters associated with the command
+        /// 与命令关联的参数
         /// </summary>
         public object Parameters { get; }
 
         /// <summary>
-        /// The active transaction for the command
+        /// 命令的活动事务
         /// </summary>
         public IDbTransaction Transaction { get; }
 
         /// <summary>
-        /// The effective timeout for the command
+        /// 命令的有效超时时间
         /// </summary>
         public int? CommandTimeout { get; }
 
         /// <summary>
-        /// The type of command that the command-text represents
+        /// 命令文本表示的命令类型
         /// </summary>
         public CommandType? CommandType { get; }
 
         /// <summary>
-        /// Should data be buffered before returning?
+        /// 应该在返回之前缓冲数据吗？
         /// </summary>
         public bool Buffered => (Flags & CommandFlags.Buffered) != 0;
 
         /// <summary>
-        /// Should the plan for this query be cached?
+        /// 应该缓存此查询的计划吗？
         /// </summary>
         internal bool AddToCache => (Flags & CommandFlags.NoCache) == 0;
 
         /// <summary>
-        /// Additional state flags against this command
+        /// 针对此命令的其他状态标志
         /// </summary>
         public CommandFlags Flags { get; }
 
         /// <summary>
-        /// Can async queries be pipelined?
+        /// 可以对异步查询进行流水线操作吗？
         /// </summary>
         public bool Pipelined => (Flags & CommandFlags.Pipelined) != 0;
 
         /// <summary>
-        /// Initialize the command definition
+        /// 初始化命令定义
         /// </summary>
         /// <param name="commandText">The text for this command.</param>
         /// <param name="parameters">The parameters for this command.</param>
@@ -103,7 +103,7 @@ namespace DotNet.Kit.Dapper
         }
 
         /// <summary>
-        /// For asynchronous operations, the cancellation-token
+        /// 对于异步操作，取消令牌
         /// </summary>
         public CancellationToken CancellationToken { get; }
 

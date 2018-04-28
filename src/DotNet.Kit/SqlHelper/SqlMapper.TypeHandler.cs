@@ -6,20 +6,20 @@ namespace DotNet.Kit.Dapper
     public static partial class SqlMapper
     {
         /// <summary>
-        /// Base-class for simple type-handlers
+        /// 用于简单类型处理程序的基类
         /// </summary>
         /// <typeparam name="T">This <see cref="Type"/> this handler is for.</typeparam>
         public abstract class TypeHandler<T> : ITypeHandler
         {
             /// <summary>
-            /// Assign the value of a parameter before a command executes
+            /// 在命令执行之前分配参数的值
             /// </summary>
             /// <param name="parameter">The parameter to configure</param>
             /// <param name="value">Parameter value</param>
             public abstract void SetValue(IDbDataParameter parameter, T value);
 
             /// <summary>
-            /// Parse a database value back to a typed value
+            /// 将数据库值解析回类型化值
             /// </summary>
             /// <param name="value">The value from the database</param>
             /// <returns>The typed value</returns>
@@ -44,7 +44,7 @@ namespace DotNet.Kit.Dapper
         }
 
         /// <summary>
-        /// Base-class for simple type-handlers that are based around strings
+        /// 基类，用于基于字符串的简单类型处理程序
         /// </summary>
         /// <typeparam name="T">This <see cref="Type"/> this handler is for.</typeparam>
         public abstract class StringTypeHandler<T> : TypeHandler<T>

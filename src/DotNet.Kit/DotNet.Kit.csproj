@@ -67,6 +67,7 @@
     <Compile Include="ConfigHelper\ConfigHelper.cs" />
     <Compile Include="CookieHelper\CookieHelper.cs" />
     <Compile Include="CsvHelper\CsvHelper.cs" />
+    <Compile Include="EncryptionHelper\EncryptionHelper.cs" />
     <Compile Include="FileHelper\FileHelper.cs" />
     <Compile Include="HtmlHelper\HtmlHelper.cs" />
     <Compile Include="HttpHelper\HttpHelper.cs" />

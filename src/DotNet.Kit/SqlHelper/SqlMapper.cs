@@ -21,7 +21,7 @@ using DataException = System.InvalidOperationException;
 namespace DotNet.Kit.Dapper
 {
     /// <summary>
-    /// A light weight object mapper for ADO.NET
+    /// 一种用于ADO.NET的轻量级对象映射器
     /// </summary>
     public static partial class SqlMapper
     {
@@ -45,7 +45,7 @@ namespace DotNet.Kit.Dapper
         }
 
         /// <summary>
-        /// Called if the query cache is purged via PurgeQueryCache
+        /// 如果通过PurgeQueryCache清除查询缓存，则调用
         /// </summary>
         public static event EventHandler QueryCachePurged;
         private static void OnQueryCachePurged()
@@ -97,7 +97,7 @@ namespace DotNet.Kit.Dapper
         }
 
         /// <summary>
-        /// Purge the query cache
+        /// 清除查询缓存
         /// </summary>
         public static void PurgeQueryCache()
         {
@@ -117,7 +117,7 @@ namespace DotNet.Kit.Dapper
         }
 
         /// <summary>
-        /// Return a count of all the cached queries by Dapper
+        /// 返回Dapper缓存的所有查询的计数
         /// </summary>
         /// <returns></returns>
         public static int GetCachedSQLCount()
@@ -126,7 +126,7 @@ namespace DotNet.Kit.Dapper
         }
 
         /// <summary>
-        /// Return a list of all the queries cached by Dapper
+        /// 返回Dapper缓存的所有查询的列表
         /// </summary>
         /// <param name="ignoreHitCountAbove"></param>
         /// <returns></returns>
@@ -139,7 +139,7 @@ namespace DotNet.Kit.Dapper
         }
 
         /// <summary>
-        /// Deep diagnostics only: find any hash collisions in the cache
+        /// 仅限于深度诊断：在缓存中查找任何哈希冲突。
         /// </summary>
         /// <returns></returns>
         public static IEnumerable<Tuple<int, int>> GetHashCollissions()
@@ -209,7 +209,7 @@ namespace DotNet.Kit.Dapper
         }
 
         /// <summary>
-        /// Clear the registered type handlers.
+        /// 清除已注册的类型处理程序
         /// </summary>
         public static void ResetTypeHandlers() => ResetTypeHandlers(true);
 
@@ -236,7 +236,7 @@ namespace DotNet.Kit.Dapper
         }
 
         /// <summary>
-        /// Configure the specified type to be mapped to a given db-type.
+        /// 将指定的类型配置为映射到给定的db类型
         /// </summary>
         /// <param name="type">The type to map from.</param>
         /// <param name="dbType">The database type to map to.</param>
@@ -251,7 +251,7 @@ namespace DotNet.Kit.Dapper
         }
 
         /// <summary>
-        /// Removes the specified type from the Type/DbType mapping table.
+        /// 从Type/DbType映射表中移除指定的类型
         /// </summary>
         /// <param name="type">The type to remove from the current map.</param>
         public static void RemoveTypeMap(Type type)
@@ -268,7 +268,7 @@ namespace DotNet.Kit.Dapper
         }
 
         /// <summary>
-        /// Configure the specified type to be processed by a custom handler.
+        /// 将指定的类型配置为由自定义处理程序处理
         /// </summary>
         /// <param name="type">The type to handle.</param>
         /// <param name="handler">The handler to process the <paramref name="type"/>.</param>
@@ -277,7 +277,7 @@ namespace DotNet.Kit.Dapper
         internal static bool HasTypeHandler(Type type) => typeHandlers.ContainsKey(type);
 
         /// <summary>
-        /// Configure the specified type to be processed by a custom handler.
+        /// 将指定的类型配置为由自定义处理程序处理
         /// </summary>
         /// <param name="type">The type to handle.</param>
         /// <param name="handler">The handler to process the <paramref name="type"/>.</param>
@@ -328,7 +328,7 @@ namespace DotNet.Kit.Dapper
         }
 
         /// <summary>
-        /// Configure the specified type to be processed by a custom handler.
+        /// 将指定的类型配置为由自定义处理程序处理
         /// </summary>
         /// <typeparam name="T">The type to handle.</typeparam>
         /// <param name="handler">The handler for the type <typeparamref name="T"/>.</param>
@@ -341,7 +341,7 @@ namespace DotNet.Kit.Dapper
         private const string ObsoleteInternalUsageOnly = "This method is for internal use only";
 
         /// <summary>
-        /// Get the DbType that maps to a given value.
+        /// 获取映射到给定值的DbType
         /// </summary>
         /// <param name="value">The object to get a corresponding database type for.</param>
         [Obsolete(ObsoleteInternalUsageOnly, false)]
@@ -357,7 +357,7 @@ namespace DotNet.Kit.Dapper
         }
 
         /// <summary>
-        /// OBSOLETE: For internal usage only. Lookup the DbType and handler for a given Type and member
+        /// 过时:仅供内部使用。查找给定类型和成员的DbType和处理程序。
         /// </summary>
         /// <param name="type">The type to lookup.</param>
         /// <param name="name">The name (for error messages).</param>
@@ -414,7 +414,7 @@ namespace DotNet.Kit.Dapper
         }
 
         /// <summary>
-        /// Obtains the data as a list; if it is *already* a list, the original object is returned without
+        /// 获取作为列表的数据；如果它*已是列表，则返回原始对象，而不返回
         /// any duplication; otherwise, ToList() is invoked.
         /// </summary>
         /// <typeparam name="T">The type of element in the list.</typeparam>
@@ -423,7 +423,7 @@ namespace DotNet.Kit.Dapper
             (source == null || source is List<T>) ? (List<T>)source : source.ToList();
 
         /// <summary>
-        /// Execute parameterized SQL.
+        /// 执行参数化SQL
         /// </summary>
         /// <param name="cnn">The connection to query on.</param>
         /// <param name="sql">The SQL to execute for this query.</param>
@@ -439,7 +439,7 @@ namespace DotNet.Kit.Dapper
         }
 
         /// <summary>
-        /// Execute parameterized SQL.
+        /// 执行参数化SQL
         /// </summary>
         /// <param name="cnn">The connection to execute on.</param>
         /// <param name="command">The command to execute on this connection.</param>
@@ -447,7 +447,7 @@ namespace DotNet.Kit.Dapper
         public static int Execute(this IDbConnection cnn, CommandDefinition command) => ExecuteImpl(cnn, ref command);
 
         /// <summary>
-        /// Execute parameterized SQL that selects a single value.
+        /// 执行选择单个值的参数化SQL
         /// </summary>
         /// <param name="cnn">The connection to execute on.</param>
         /// <param name="sql">The SQL to execute.</param>
@@ -463,7 +463,7 @@ namespace DotNet.Kit.Dapper
         }
 
         /// <summary>
-        /// Execute parameterized SQL that selects a single value.
+        /// 执行选择单个值的参数化SQL
         /// </summary>
         /// <typeparam name="T">The type to return.</typeparam>
         /// <param name="cnn">The connection to execute on.</param>
@@ -480,7 +480,7 @@ namespace DotNet.Kit.Dapper
         }
 
         /// <summary>
-        /// Execute parameterized SQL that selects a single value.
+        /// 执行选择单个值的参数化SQL
         /// </summary>
         /// <param name="cnn">The connection to execute on.</param>
         /// <param name="command">The command to execute.</param>
@@ -489,7 +489,7 @@ namespace DotNet.Kit.Dapper
             ExecuteScalarImpl<object>(cnn, ref command);
 
         /// <summary>
-        /// Execute parameterized SQL that selects a single value.
+        /// 执行选择单个值的参数化SQL
         /// </summary>
         /// <typeparam name="T">The type to return.</typeparam>
         /// <param name="cnn">The connection to execute on.</param>
@@ -631,7 +631,7 @@ namespace DotNet.Kit.Dapper
         }
 
         /// <summary>
-        /// Return a sequence of dynamic objects with properties matching the columns.
+        /// 返回具有与列匹配的属性的动态对象序列
         /// </summary>
         /// <param name="cnn">The connection to query on.</param>
         /// <param name="sql">The SQL to execute for the query.</param>
@@ -645,7 +645,7 @@ namespace DotNet.Kit.Dapper
             Query<DapperRow>(cnn, sql, param as object, transaction, buffered, commandTimeout, commandType);
 
         /// <summary>
-        /// Return a dynamic object with properties matching the columns.
+        /// 返回具有与列匹配的属性的动态对象
         /// </summary>
         /// <param name="cnn">The connection to query on.</param>
         /// <param name="sql">The SQL to execute for the query.</param>
@@ -658,7 +658,7 @@ namespace DotNet.Kit.Dapper
             QueryFirst<DapperRow>(cnn, sql, param as object, transaction, commandTimeout, commandType);
 
         /// <summary>
-        /// Return a dynamic object with properties matching the columns.
+        /// 返回具有与列匹配的属性的动态对象
         /// </summary>
         /// <param name="cnn">The connection to query on.</param>
         /// <param name="sql">The SQL to execute for the query.</param>
@@ -671,7 +671,7 @@ namespace DotNet.Kit.Dapper
             QueryFirstOrDefault<DapperRow>(cnn, sql, param as object, transaction, commandTimeout, commandType);
 
         /// <summary>
-        /// Return a dynamic object with properties matching the columns.
+        /// 返回一个具有与列匹配的属性的动态对象
         /// </summary>
         /// <param name="cnn">The connection to query on.</param>
         /// <param name="sql">The SQL to execute for the query.</param>
@@ -684,7 +684,7 @@ namespace DotNet.Kit.Dapper
             QuerySingle<DapperRow>(cnn, sql, param as object, transaction, commandTimeout, commandType);
 
         /// <summary>
-        /// Return a dynamic object with properties matching the columns.
+        /// 返回一个具有与列匹配的属性的动态对象
         /// </summary>
         /// <param name="cnn">The connection to query on.</param>
         /// <param name="sql">The SQL to execute for the query.</param>
@@ -979,7 +979,7 @@ namespace DotNet.Kit.Dapper
             QueryRowImpl<T>(cnn, Row.SingleOrDefault, ref command, typeof(T));
 
         /// <summary>
-        /// Execute a command that returns multiple result sets, and access each in turn.
+        /// 执行一个返回多个结果集的命令，并依次访问每个结果集。
         /// </summary>
         /// <param name="cnn">The connection to query on.</param>
         /// <param name="sql">The SQL to execute for this query.</param>
@@ -994,7 +994,7 @@ namespace DotNet.Kit.Dapper
         }
 
         /// <summary>
-        /// Execute a command that returns multiple result sets, and access each in turn.
+        /// 执行一个返回多个结果集的命令，并依次访问每个结果集。
         /// </summary>
         /// <param name="cnn">The connection to query on.</param>
         /// <param name="command">The command to execute for this query.</param>

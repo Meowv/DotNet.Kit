@@ -6,7 +6,7 @@ using System.Reflection;
 namespace DotNet.Kit.Dapper
 {
     /// <summary>
-    /// Used to pass a DataTable as a TableValuedParameter
+    /// 用于将数据表作为表值参数传递
     /// </summary>
     internal sealed class TableValuedParameter : SqlMapper.ICustomQueryParameter
     {

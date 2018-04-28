@@ -3,17 +3,16 @@
 namespace DotNet.Kit.Dapper
 {
     /// <summary>
-    /// Describes a reader that controls the lifetime of both a command and a reader,
-    /// exposing the downstream command/reader as properties.
+    /// 描述一个读取器，该读取器控制命令和读取器的生存期，并将下游命令/读取器公开为属性。
     /// </summary>
     public interface IWrappedDataReader : IDataReader
     {
         /// <summary>
-        /// Obtain the underlying reader
+        /// 获取基础读取器
         /// </summary>
         IDataReader Reader { get; }
         /// <summary>
-        /// Obtain the underlying command
+        /// 获取基础命令
         /// </summary>
         IDbCommand Command { get; }
     }

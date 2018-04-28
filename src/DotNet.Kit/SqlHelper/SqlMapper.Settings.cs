@@ -6,7 +6,7 @@ namespace DotNet.Kit.Dapper
     public static partial class SqlMapper
     {
         /// <summary>
-        /// Permits specifying certain SqlMapper values globally.
+        /// 允许在全局范围内指定某些SqlMapper值
         /// </summary>
         public static class Settings
         {
