@@ -45,6 +45,7 @@
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\DotNet.Kit.xml</DocumentationFile>
     <NoWarn>1591</NoWarn>
+    <LangVersion>7.2</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">

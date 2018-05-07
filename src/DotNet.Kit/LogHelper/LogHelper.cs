@@ -8,6 +8,7 @@ namespace DotNet.Kit
         /// <summary>
         /// 向日志文件写入调试信息
         /// </summary>
+        /// <param name="path">路径</param>
         /// <param name="className">类名</param>
         /// <param name="content">写入内容</param>
         public static void Debug(string path, string className, string content)
@@ -18,6 +19,7 @@ namespace DotNet.Kit
         /// <summary>
         /// 向日志文件写入运行时信息
         /// </summary>
+        /// <param name="path">路径</param>
         /// <param name="className">类名</param>
         /// <param name="content">写入内容</param>
         public static void Info(string path, string className, string content)
@@ -28,6 +30,7 @@ namespace DotNet.Kit
         /// <summary>
         /// 向日志文件写入出错信息
         /// </summary>
+        /// <param name="path">路径</param>
         /// <param name="className">类名</param>
         /// <param name="content">写入内容</param>
         public static void Error(string path, string className, string content)
@@ -38,6 +41,7 @@ namespace DotNet.Kit
         /// <summary>
         /// 实际的写日志操作
         /// </summary>
+        /// <param name="path">路径</param>
         /// <param name="type">日志记录类型</param>
         /// <param name="className">类名</param>
         /// <param name="content">写入内容</param>

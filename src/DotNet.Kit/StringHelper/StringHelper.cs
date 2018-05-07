@@ -44,7 +44,7 @@ namespace DotNet.Kit
         }
 
         /// <summary>
-        /// 把 List<string> 按照分隔符组装成 string
+        /// 按照分隔符组装成字符串
         /// </summary>
         /// <param name="list"></param>
         /// <param name="speater"></param>

@@ -553,7 +553,7 @@ namespace DotNet.Kit
         /// <summary>
         /// 转换为黑白图片
         /// </summary>
-        /// <param name="mybt">要进行处理的图片</param>
+        /// <param name="mybm">要进行处理的图片</param>
         /// <param name="width">图片的长度</param>
         /// <param name="height">图片的高度</param>
         public Bitmap BWPic(Bitmap mybm, int width, int height)
@@ -579,7 +579,7 @@ namespace DotNet.Kit
         /// 获取图片中的各帧
         /// </summary>
         /// <param name="pPath">图片路径</param>
-        /// <param name="pSavePath">保存路径</param>
+        /// <param name="pSavedPath">保存路径</param>
         public static void GetFrames(string pPath, string pSavedPath)
         {
             Image gif = Image.FromFile(pPath);

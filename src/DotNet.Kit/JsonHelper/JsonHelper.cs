@@ -335,7 +335,7 @@ namespace DotNet.Kit
         /// <summary>
         /// 过滤特殊字符
         /// </summary>
-        /// <param name="str"></param>
+        /// <param name="s"></param>
         /// <returns></returns>
         private static string String2Json(string s)
         {

@@ -20,7 +20,7 @@ namespace DotNet.Kit
         /// <summary>
         /// DateTime时间格式转换为Unix时间戳格式
         /// </summary>
-        /// <param name="time"></param>
+        /// <param name="dateTime"></param>
         /// <returns></returns>
         public static string ConvertDateTime(DateTime dateTime)
         {
